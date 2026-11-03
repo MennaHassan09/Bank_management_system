@@ -147,7 +147,7 @@ double Withdrawal(double balance) {
     cout << "Enter the amount you want to withdrawal : ";
     cin >> withdrawal;
 
-    if ((withdrawal >= 50) && (withdrawal <= balance)) {//التاكد ان المبلغ المراد سحبه موجود فى الحساب بلفعل 
+    if ((withdrawal >= 50) && (withdrawal <= balance) && (withdrawal <= 30000)) {//التاكد ان المبلغ المراد سحبه موجود فى الحساب بلفعل 
         balance -= withdrawal;
         cout << "Withdrawal Successful!\nNew balance is : " << balance << " EGP " << endl;
         Transaction newTransaction = {"Withdrawal", withdrawal, balance};//حفظ بيانات عمليه السحب
